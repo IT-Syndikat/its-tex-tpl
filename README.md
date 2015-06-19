@@ -10,3 +10,5 @@ Additional input is always welcome, just open an issue or pull request.
 
 - XeTeX
 - Python Pygments
+- Ubuntu Font
+- Droid Font
