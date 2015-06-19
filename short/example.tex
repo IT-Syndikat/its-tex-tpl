@@ -1,0 +1,174 @@
+% 2015 | IT-Syndikat
+% vim: set spell tw=79 :
+
+\documentclass[10pt,a4paper,parskip=half]{scrartcl}
+
+% fixes
+\usepackage{fixltx2e}
+\usepackage{lmodern}
+
+% font
+\usepackage{cmbright}
+\usepackage{fontspec}
+    \setsansfont{Ubuntu Light}
+    \setmonofont{DroidSansMono}[Scale=0.8]
+
+% color
+\usepackage{xcolor}
+    \definecolor{uibkblue}{cmyk}{1.0, 0.6, 0.0, 0.56}
+    \definecolor{uibkorange}{cmyk}{0.0, 0.5, 1.0, 0.0}
+
+% page
+\usepackage[cm,plain]{fullpage}
+
+% math
+\usepackage{amsmath}
+\usepackage{amssymb}
+    \let\emptyset\varnothing
+\usepackage{mathtools}
+    \mathtoolsset{centercolon}
+\usepackage{amsthm}
+    \newtheoremstyle{plain}{\topsep}{\topsep}{\normalfont}{10pt}{\bfseries}{\normalfont:}{5pt}{}
+    \theoremstyle{plain}
+    \newtheorem{theorem}{Theorem}[section]
+    \newtheorem{corollary}[theorem]{Corollary}
+    \newtheorem{notation}[theorem]{Notation}
+    \newtheorem{definition}[theorem]{Definition}
+    \renewcommand{\proofname}{Proof:}
+
+% SI units
+\usepackage[binary-units,per-mode=symbol]{siunitx}
+    \sisetup{detect-all}
+
+% keys and menus
+\usepackage[os=win]{menukeys}
+    \changemenuelement{hyphenatepathswithfolder}{sep}{/}
+    \renewmenumacro{\directory}{hyphenatepathswithfolder}
+
+% graphics
+\usepackage{tikz}
+\usepackage{graphicx}
+
+% quote
+\usepackage{mdframed}
+    \newmdenv[
+        topline=false,
+        bottomline=false,
+        rightline=false,
+    ]{sidequote}
+\renewenvironment{quote}
+    {\begin{center}\begin{minipage}{0.95\textwidth}\begin{sidequote}}
+    {\end{sidequote}\end{minipage}\end{center}}
+
+% links
+\usepackage{hyperref}
+    \hypersetup{
+        colorlinks      = true,
+        citecolor       = uibkblue,
+        citebordercolor = uibkblue,
+        linkcolor       = uibkblue,
+        linkbordercolor = uibkblue!40,
+        urlcolor        = uibkblue,
+        pdfstartview    = {XYZ null null null},
+        pdfpagemode     = UseOutlines,
+    }
+    \renewcommand{\equationautorefname}{equation}
+    \renewcommand{\figureautorefname}{figure}
+    \renewcommand{\tableautorefname}{table}
+    \urlstyle{same}
+    \usepackage[all]{hypcap}
+
+% PDFs
+\usepackage{pdfpages}
+
+% references
+\usepackage{cleveref}
+\usepackage[numbers]{natbib}
+    \bibliographystyle{plainnat}
+
+% additional symbols
+\usepackage{MnSymbol}
+
+% source code
+\usepackage{listings}
+    \lstset{
+        basicstyle=\scriptsize\ttfamily,
+        breaklines=true,
+        breakindent=0pt,
+        prebreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\lcurvearrowdown}},
+        xleftmargin=0.05\linewidth,
+        xrightmargin=0.05\linewidth,
+    }
+    \newcommand{\exec}[1]{\lstinputlisting{|#1}}
+
+\usepackage{minted}
+    \renewcommand{\theFancyVerbLine}{\sffamily{\tiny\arabic{FancyVerbLine}}}
+    \renewcommand{\listingscaption}{\sffamily Listing}
+    \renewcommand{\listoflistingscaption}{List of Listings}
+    \newminted[code]{text}{fontsize=\scriptsize,frame=leftline,framesep=2mm,linenos}
+    \newminted[plaincode]{text}{fontsize=\scriptsize,framesep=2mm}
+    \newminted{c}{fontsize=\scriptsize,frame=leftline,framesep=2mm,linenos}
+
+% title
+\makeatletter
+\def\maketitle{%
+    \begin{minipage}[t]{0.8\linewidth}%
+        \flushleft%
+        \LARGE \@title\\
+        \large \@subtitle
+    \end{minipage}%
+    \hfill%
+    \begin{minipage}[t]{0.2\linewidth}%
+        \flushright%
+        \begin{tabular}[t]{r}\@author\\\@date\end{tabular}\\
+    \end{minipage}%
+}
+\makeatother
+
+% fixes
+\usepackage{scrhack}
+
+% minted style
+\usemintedstyle{tango}
+
+% meta data
+\title{Example Document}
+\subtitle{Compressed Template}
+\author{Alex Hirsch \\ Frajo Haider}
+\date{2015-01-01}
+
+% document specific stuff
+\usepackage{lipsum}
+
+\begin{document}
+
+\maketitle
+
+\section*{Abstract}
+\label{sec:abstract}
+
+This document yields a very condensed layout
+
+\section{Sectioning}
+\label{sec:sectioning}
+
+ \lipsum[3]
+
+\subsection{subsection name}
+\label{sub:subsection_name}
+
+ \lipsum[2]
+
+ \lipsum[3]
+
+\subsubsection{subsubsection name}
+\label{ssub:subsubsection_name}
+
+ \lipsum[3]
+
+\paragraph{paragraph name}
+\label{par:paragraph_name}
+
+\lipsum[3]
+
+\end{document}
