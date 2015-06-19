@@ -1,4 +1,4 @@
-# IT-Syndikat LaTeX Template
+# IT-Syndikat TeX Template
 
 Maintainer: W4RH4WK
 
