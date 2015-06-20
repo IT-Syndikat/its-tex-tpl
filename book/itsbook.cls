@@ -2,8 +2,8 @@
 
 \NeedsTeXFormat{LaTeX2e}
 
-\ProvidesClass{itsarticle}[2015/06/02 ITS Article Class]
-\LoadClass[10pt,a4paper,parskip=half,titlepage]{scrartcl}
+\ProvidesClass{itsbook}[2015/06/02 ITS Book Class]
+\LoadClass[10pt,a4paper,parskip=half]{scrbook}
 
 % fixes
 \usepackage{fixltx2e}
@@ -22,6 +22,15 @@
 
 % page
 \usepackage{anysize}
+\usepackage{chngcntr}
+    \counterwithin{section}{chapter}
+    \counterwithout{equation}{chapter}
+    \counterwithout{figure}{chapter}
+    \counterwithout{table}{chapter}
+\usepackage{etoolbox}
+    \appto\mainmatter{
+        \pagestyle{headings}
+    }
 
 % math
 \usepackage{amsmath}
