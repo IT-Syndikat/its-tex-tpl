@@ -5,14 +5,14 @@
 \ProvidesClass{itsbook}[2015/06/02 ITS Book Class]
 \LoadClass[10pt,a4paper,parskip=half]{scrbook}
 
-% fixes
+% fixes pre
 \usepackage{fixltx2e}
-\usepackage{lmodern}
 
 % font
-\usepackage{cmbright}
-\usepackage{fontspec}
-    \setsansfont{Ubuntu Light}
+\usepackage[math]{iwona}
+\usepackage[no-math]{fontspec}
+    \setmainfont{DroidSerif}
+    \setsansfont{DroidSans}
     \setmonofont{DroidSansMono}[Scale=0.8]
 
 % color
@@ -69,8 +69,8 @@
         rightline=false,
     ]{sidequote}
 \renewenvironment{quote}
-    {\begin{center}\begin{minipage}{0.95\textwidth}\begin{sidequote}}
-    {\end{sidequote}\end{minipage}\end{center}}
+    {\hfill\begin{minipage}{0.95\textwidth}\begin{sidequote}}
+    {\end{sidequote}\end{minipage}}
 
 % links
 \usepackage{hyperref}
@@ -114,8 +114,8 @@
     \newcommand{\exec}[1]{\lstinputlisting{|#1}}
 
 \usepackage{minted}
-    \renewcommand{\theFancyVerbLine}{\sffamily{\tiny\arabic{FancyVerbLine}}}
-    \renewcommand{\listingscaption}{\sffamily Listing}
+    \renewcommand{\theFancyVerbLine}{\normalfont{\tiny\arabic{FancyVerbLine}}}
+    \renewcommand{\listingscaption}{\normalfont Listing}
     \renewcommand{\listoflistingscaption}{List of Listings}
     \newminted[code]{text}{fontsize=\scriptsize,frame=leftline,framesep=2mm,linenos}
     \newminted[plaincode]{text}{fontsize=\scriptsize,framesep=2mm}
@@ -176,7 +176,7 @@
         \par\end{flushright}
     }
 
-% fixes
+% fixes post
 \usepackage{scrhack}
 
 % minted style
