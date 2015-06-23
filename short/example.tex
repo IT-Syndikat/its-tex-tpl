@@ -3,14 +3,14 @@
 
 \documentclass[10pt,a4paper,parskip=half]{scrartcl}
 
-% fixes
+% fixes pre
 \usepackage{fixltx2e}
-\usepackage{lmodern}
 
 % font
-\usepackage{cmbright}
-\usepackage{fontspec}
-    \setsansfont{Ubuntu Light}
+\usepackage[math]{iwona}
+\usepackage[no-math]{fontspec}
+    \setmainfont{DroidSerif}
+    \setsansfont{DroidSans}
     \setmonofont{DroidSansMono}[Scale=0.8]
 
 % color
@@ -57,8 +57,8 @@
         rightline=false,
     ]{sidequote}
 \renewenvironment{quote}
-    {\begin{center}\begin{minipage}{0.95\textwidth}\begin{sidequote}}
-    {\end{sidequote}\end{minipage}\end{center}}
+    {\hfill\begin{minipage}{0.95\textwidth}\begin{sidequote}}
+    {\end{sidequote}\end{minipage}}
 
 % links
 \usepackage{hyperref}
@@ -102,8 +102,9 @@
     \newcommand{\exec}[1]{\lstinputlisting{|#1}}
 
 \usepackage{minted}
-    \renewcommand{\theFancyVerbLine}{\sffamily{\tiny\arabic{FancyVerbLine}}}
-    \renewcommand{\listingscaption}{\sffamily Listing}
+    \usemintedstyle{tango}
+    \renewcommand{\theFancyVerbLine}{\normalfont{\tiny\arabic{FancyVerbLine}}}
+    \renewcommand{\listingscaption}{\normalfont Listing}
     \renewcommand{\listoflistingscaption}{List of Listings}
     \newminted[code]{text}{fontsize=\scriptsize,frame=leftline,framesep=2mm,linenos}
     \newminted[plaincode]{text}{fontsize=\scriptsize,framesep=2mm}
@@ -125,11 +126,8 @@
 }
 \makeatother
 
-% fixes
+% fixes post
 \usepackage{scrhack}
-
-% minted style
-\usemintedstyle{tango}
 
 % meta data
 \title{Example Document}
@@ -319,6 +317,12 @@ Block quotes can be used solo\dots
 
     Instrumentation (WMI), the Server Manager WMI provider, and a new feature
     for 4.0, Windows PowerShell Desired State Configuration (DSC).
+\end{quote}
+
+small block quote
+
+\begin{quote}
+    Windows Management Framework 4.0 \dots
 \end{quote}
 
 \subsection{Links}
