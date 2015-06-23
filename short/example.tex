@@ -115,12 +115,12 @@
 \def\maketitle{%
     \begin{minipage}[t]{0.8\linewidth}%
         \flushleft%
-        \LARGE \@title\\
-        \large \@subtitle
+        \LARGE\sffamily\@title\\
+        \large\sffamily\@subtitle
     \end{minipage}%
     \hfill%
     \begin{minipage}[t]{0.2\linewidth}%
-        \flushright%
+        \flushright\sffamily%
         \begin{tabular}[t]{r}\@author\\\@date\end{tabular}\\
     \end{minipage}%
 }
