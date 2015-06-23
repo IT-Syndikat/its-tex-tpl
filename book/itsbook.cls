@@ -156,7 +156,7 @@
         \end{center}
         \vspace{40mm}
         \begin{flushright}
-        \LARGE
+        \LARGE\sffamily
     }
     \posttitle{
         \par\end{flushright}\vspace{10mm}
@@ -164,13 +164,13 @@
     \preauthor{
         \begin{flushright}
         \vspace{20mm}
-        \large\bf
+        \large\sffamily\bfseries
     }
     \postauthor{
         \end{flushright}
     }
     \predate{
-        \begin{flushright}\large
+        \begin{flushright}\large\sffamily
     }
     \postdate{
         \par\end{flushright}
