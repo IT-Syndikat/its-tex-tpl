@@ -107,7 +107,7 @@
     \renewcommand{\listingscaption}{\normalfont Listing}
     \renewcommand{\listoflistingscaption}{List of Listings}
     \newminted[code]{text}{fontsize=\scriptsize,frame=leftline,framesep=2mm,linenos}
-    \newminted[plaincode]{text}{fontsize=\scriptsize,framesep=2mm}
+    \newminted[pre]{text}{fontsize=\scriptsize,framesep=2mm}
     \newminted{c}{fontsize=\scriptsize,frame=leftline,framesep=2mm,linenos}
 
 % title
@@ -401,8 +401,8 @@ ISR(USART_RXC_vect) {
 \subsection{Plain}
 \label{sub:plain}
 
-\begin{plaincode}
+\begin{pre}
     PS> Get-Command -Module PSWindowsUpdate
-\end{plaincode}
+\end{pre}
 
 \end{document}

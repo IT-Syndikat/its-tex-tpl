@@ -118,7 +118,7 @@
     \renewcommand{\listingscaption}{\normalfont Listing}
     \renewcommand{\listoflistingscaption}{List of Listings}
     \newminted[code]{text}{fontsize=\scriptsize,frame=leftline,framesep=2mm,linenos}
-    \newminted[plaincode]{text}{fontsize=\scriptsize,framesep=2mm}
+    \newminted[pre]{text}{fontsize=\scriptsize,framesep=2mm}
     \newminted{c}{fontsize=\scriptsize,frame=leftline,framesep=2mm,linenos}
 
 % tables
