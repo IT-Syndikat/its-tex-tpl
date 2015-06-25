@@ -44,8 +44,9 @@
 
 % keys and menus
 \usepackage[os=win]{menukeys}
-    \changemenuelement{hyphenatepathswithfolder}{sep}{/}
-    \renewmenumacro{\directory}{hyphenatepathswithfolder}
+    \changemenuelement{hyphenatepathswithfolder}{sep}{ / }
+    \renewmenumacro{\menu}[>]{angularmenus}
+    \renewmenumacro{\directory}[/]{hyphenatepathswithfolder}
 
 % graphics
 \usepackage{tikz}

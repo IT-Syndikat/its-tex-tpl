@@ -42,8 +42,9 @@
 
 % keys and menus
 \usepackage[os=win]{menukeys}
-    \changemenuelement{hyphenatepathswithfolder}{sep}{/}
-    \renewmenumacro{\directory}{hyphenatepathswithfolder}
+    \changemenuelement{hyphenatepathswithfolder}{sep}{ / }
+    \renewmenumacro{\menu}[>]{angularmenus}
+    \renewmenumacro{\directory}[/]{hyphenatepathswithfolder}
 
 % graphics
 \usepackage{tikz}
@@ -283,7 +284,7 @@ Please use the SI package whenever possible, also binary units are available,
 
 \menu{Server > Open easy settings > 2. Windows Accounts > Add}
 
-\directory{\%windir\% / system32 / WindowsPowerShell / v1.0 / Modules}
+\directory{\%windir\%/system32/WindowsPowerShell/v1.0/Modules}
 
 \keys{cmd + R}
 
