@@ -123,30 +123,30 @@
     \newminted{c}{fontsize=\scriptsize,frame=leftline,framesep=2mm,linenos}
 
 % tables
-\let\@uibktoc\tableofcontents
+\let\@itstoc\tableofcontents
 \def\tableofcontents{
     \phantomsection
-    \@uibktoc
+    \@itstoc
 }
-\let\@uibktof\listoffigures
+\let\@itstof\listoffigures
 \def\listoffigures{
     \phantomsection
-    \@uibktof
+    \@itstof
 }
-\let\@uibktot\listoftables
+\let\@itstot\listoftables
 \def\listoftables{
     \phantomsection
-    \@uibktot
+    \@itstot
 }
-\let\@uibktol\listoflistings
+\let\@itstol\listoflistings
 \def\listoflistings{
     \phantomsection
-    \@uibktol
+    \@itstol
 }
-\let\@uibkbib\bibliography
+\let\@itsbib\bibliography
 \def\bibliography{
     \phantomsection
-    \@uibkbib
+    \@itsbib
 }
 
 % title
